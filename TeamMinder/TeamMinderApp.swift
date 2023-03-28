@@ -9,12 +9,30 @@ import SwiftUI
 
 @main
 struct TeamMinderApp: App {
-    
-    
-    @StateObject var team = testTeamData()
+    @StateObject var dataService = DataService()
     var body: some Scene {
         WindowGroup {
-            ContentView(team: team)
+            ContentView()
+                .environmentObject(dataService)
+                .environmentObject(dataService.team)
+                .toolbar {
+                    Text("Last saved: \(dataService.team.lastSaveDisplay())")
+                    Button(action: {dataService.save()}) {
+                        Text("Save")
+                            .foregroundColor(.blue)
+                        
+                    }.padding(1.0)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 6)
+                                .stroke(Color.blue, lineWidth: 2)
+                        )
+                    Button(action: {dataService.load()}) {
+                    Text("Load")
+                                .foregroundColor(.blue)
+                        
+                }
+                    
+                }
         }
     }
 }

@@ -19,6 +19,9 @@
 		4D3641AE29CF876F00FECC61 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3641AD29CF876F00FECC61 /* Team.swift */; };
 		4D3641B029D1D81100FECC61 /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3641AF29D1D81100FECC61 /* Sidebar.swift */; };
 		4D3641B229D1D8AF00FECC61 /* TeamMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3641B129D1D8AF00FECC61 /* TeamMemberView.swift */; };
+		4D85042829D2197E00386F08 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85042729D2197E00386F08 /* DataService.swift */; };
+		4D85042A29D22A3B00386F08 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85042929D22A3B00386F08 /* InfoView.swift */; };
+		4D85042C29D22A4C00386F08 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85042B29D22A4C00386F08 /* QuestionsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		4D3641AD29CF876F00FECC61 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		4D3641AF29D1D81100FECC61 /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
 		4D3641B129D1D8AF00FECC61 /* TeamMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberView.swift; sourceTree = "<group>"; };
+		4D85042729D2197E00386F08 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		4D85042929D22A3B00386F08 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		4D85042B29D22A4C00386F08 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,8 @@
 			children = (
 				4D3641AF29D1D81100FECC61 /* Sidebar.swift */,
 				4D3641B129D1D8AF00FECC61 /* TeamMemberView.swift */,
+				4D85042929D22A3B00386F08 /* InfoView.swift */,
+				4D85042B29D22A4C00386F08 /* QuestionsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 		4D3641A829CCE16500FECC61 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				4D85042729D2197E00386F08 /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -303,7 +312,10 @@
 				4D3641B029D1D81100FECC61 /* Sidebar.swift in Sources */,
 				4D36417C29CCDC7D00FECC61 /* TeamMinderApp.swift in Sources */,
 				4D3641B229D1D8AF00FECC61 /* TeamMemberView.swift in Sources */,
+				4D85042829D2197E00386F08 /* DataService.swift in Sources */,
 				4D3641AE29CF876F00FECC61 /* Team.swift in Sources */,
+				4D85042A29D22A3B00386F08 /* InfoView.swift in Sources */,
+				4D85042C29D22A4C00386F08 /* QuestionsView.swift in Sources */,
 				4D3641AA29CCE19E00FECC61 /* TeamMember.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

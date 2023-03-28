@@ -11,17 +11,6 @@ struct QuestionsView: View {
     @EnvironmentObject var team: Team
     
     var body: some View {
-        if team.members.count == 0 {
-            NoTeamViewOfFull()
-        }else {
-            FullQuestionsView()
-        }    }
-}
-
-struct FullQuestionsView: View {
-    @EnvironmentObject var team: Team
-    
-    var body: some View {
         Text("qs")
     }
 }

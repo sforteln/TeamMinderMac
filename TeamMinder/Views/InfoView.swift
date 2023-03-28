@@ -16,22 +16,9 @@ struct InfoView: View {
     }
     
     var body: some View {
-        if team.members.count == 0 {
-            NoTeamViewOfFull()
-        }else {
-            FullInfoView(member: member)
-        }
-    }
-}
-
-struct FullInfoView: View {
-    @State var member: TeamMember
-    var body: some View {
         Text(member.name)
-        
     }
 }
-
 
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {

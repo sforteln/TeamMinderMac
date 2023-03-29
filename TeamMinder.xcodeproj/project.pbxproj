@@ -10,6 +10,7 @@
 		4D34651E29D48BC600B5DE29 /* CompletedQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34651D29D48BC600B5DE29 /* CompletedQuestionsView.swift */; };
 		4D34652029D48BE400B5DE29 /* TrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34651F29D48BE400B5DE29 /* TrendsView.swift */; };
 		4D34652229D48BEE00B5DE29 /* TeamTrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652129D48BEE00B5DE29 /* TeamTrendsView.swift */; };
+		4D34652529D4994500B5DE29 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652429D4994500B5DE29 /* Styling.swift */; };
 		4D36417C29CCDC7D00FECC61 /* TeamMinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36417B29CCDC7D00FECC61 /* TeamMinderApp.swift */; };
 		4D36417E29CCDC7D00FECC61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36417D29CCDC7D00FECC61 /* ContentView.swift */; };
 		4D36418029CCDC7E00FECC61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D36417F29CCDC7E00FECC61 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		4D34651D29D48BC600B5DE29 /* CompletedQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedQuestionsView.swift; sourceTree = "<group>"; };
 		4D34651F29D48BE400B5DE29 /* TrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsView.swift; sourceTree = "<group>"; };
 		4D34652129D48BEE00B5DE29 /* TeamTrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTrendsView.swift; sourceTree = "<group>"; };
+		4D34652429D4994500B5DE29 /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
 		4D36417829CCDC7D00FECC61 /* TeamMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D36417B29CCDC7D00FECC61 /* TeamMinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMinderApp.swift; sourceTree = "<group>"; };
 		4D36417D29CCDC7D00FECC61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D34652329D4993200B5DE29 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				4D34652429D4994500B5DE29 /* Styling.swift */,
+			);
+			path = Styling;
+			sourceTree = "<group>";
+		};
 		4D36416F29CCDC7D00FECC61 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		4D36417A29CCDC7D00FECC61 /* TeamMinder */ = {
 			isa = PBXGroup;
 			children = (
+				4D34652329D4993200B5DE29 /* Styling */,
 				4D3641A829CCE16500FECC61 /* Services */,
 				4D3641A729CCE15A00FECC61 /* Views */,
 				4D3641A629CCE14900FECC61 /* ViewModels */,
@@ -319,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D34652529D4994500B5DE29 /* Styling.swift in Sources */,
 				4D36417E29CCDC7D00FECC61 /* ContentView.swift in Sources */,
 				4D3641AC29CF850F00FECC61 /* Question.swift in Sources */,
 				4D34651E29D48BC600B5DE29 /* CompletedQuestionsView.swift in Sources */,

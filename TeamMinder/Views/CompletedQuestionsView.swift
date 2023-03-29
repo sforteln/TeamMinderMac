@@ -30,28 +30,10 @@ struct SingleCompletedQuestionView: View {
     @State private var showCompleteQuestionSheet = false
     var body: some View {
         VStack {
-            HStack {
-                Text("Question").font(.headline)
-                Spacer()
-            }
-            TextField("Question", text: $question.question, axis: .vertical)
-                .lineLimit(2...10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.gray, lineWidth: 2)
-                )
-                
-            HStack {
-                Text("Notes from \(question.completedDateDisplay())")
-                    .font(.headline)
-                Spacer()
-            }
-             TextField("Notes", text: $question.notes, axis: .vertical)
-                 .lineLimit(2...10)
-                 .overlay(
-                     RoundedRectangle(cornerRadius: 8)
-                         .stroke(Color.gray, lineWidth: 2)
-                 )
+            TitleText("Question")
+            QuestionTextField($question.question)
+            TitleText("Notes from \(question.completedDateDisplay())")
+            QuestionTextField($question.notes)
             Divider()
             Spacer()
         }

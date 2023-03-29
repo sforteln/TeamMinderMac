@@ -14,10 +14,28 @@ class TeamMember : ObservableObject, Codable {
     @Published var notes : String = ""
     @Published var family : String = ""
     @Published var questions : [Question] = [Question]()
-    
+        
     init(name: String) {
         self.id = UUID()
         self.name = name
+    }
+    
+    func addQuestion(question: String) {
+        let newQuestion = Question(question: question)
+        questions.append(newQuestion)
+    }
+    
+    func getCompletedQuestions() -> [Question] {
+        return questions.filter { question in
+            return question.completeDate != nil
+        }
+    }
+    
+    func getNotCompletedQuestions() -> [Question] {
+        return questions.filter { question in
+            return question.completeDate == nil
+        }
+        
     }
     
     required init(from decoder: Decoder) throws {
@@ -28,7 +46,6 @@ class TeamMember : ObservableObject, Codable {
         notes = try values.decode(String.self, forKey: .notes)
         family = try values.decode(String.self, forKey: .family)
         questions = try values.decode(Array.self, forKey: .questions)
-        
     }
     
     func encode(to encoder: Encoder) throws {

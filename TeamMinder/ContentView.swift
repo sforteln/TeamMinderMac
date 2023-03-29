@@ -20,9 +20,10 @@ struct ContentView: View {
                     .font(.headline)
                 Divider()
                 ForEach(team.members, id: \.name) { member in
-                    NavigationLink(value: member) {
-                        Text(member.name)
-                    }
+//                    NavigationLink(value: member) {
+//                        Text(member.name)
+//                    }
+                    TeamMemberSidebarCell(member: member)
                 }
                 Spacer()
             }

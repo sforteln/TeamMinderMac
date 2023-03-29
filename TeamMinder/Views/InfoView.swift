@@ -16,45 +16,18 @@ struct InfoView: View {
     }
     
     var body: some View {
-        VStack {
-            VStack{
-                HStack {
-                    Text("Name")
-                    Spacer()
-                }
-                HStack {
-                    TextField("Name", text: $member.name)
-                }
-            }
-            VStack{
-                HStack {
-                    Text("City")
-                    Spacer()
-                }
-                HStack {
-                    TextField("City", text: $member.city)
-                }
-            }
-            VStack{
-                HStack {
-                    Text("Notes")
-                    Spacer()
-                }
-                HStack {
-                    TextField("Notes", text: $member.notes, axis: .vertical)
-                        .lineLimit(5...10)
-                }
-            }
-            VStack{
-                HStack {
-                    Text("Family")
-                    Spacer()
-                }
-                HStack {
-                    TextField("Family", text: $member.family, axis: .vertical)
-                        .lineLimit(5...10)
-                }
-            }
+        List {
+            TitleText("Name")
+            TMSingleLineTextField($member.name)
+            
+            TitleText("City")
+            TMSingleLineTextField($member.city)
+            
+            TitleText("Notes")
+            TMTextField($member.notes)
+            
+            TitleText("Family")
+            TMTextField($member.family)
             Spacer()
             
             HStack {
@@ -67,7 +40,7 @@ struct InfoView: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 6)
                         .stroke(Color.red, lineWidth: 2)
-               ).padding(4.0)
+                ).padding(4.0)
             }
         }.padding([.leading, .trailing], 10)
     }

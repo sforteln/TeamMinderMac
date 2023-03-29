@@ -53,14 +53,7 @@ struct SingleQuestionView: View {
     @State private var showCompleteQuestionSheet = false
     var body: some View {
         HStack {
-            TextField("Family", text: $question.question, axis: .vertical)
-                .lineLimit(2...10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.gray, lineWidth: 1)
-                )
-                
-                
+            TMTextField($question.question)
             Spacer()
             Button(action: {showCompleteQuestionSheet.toggle()}, label: {
                 Label("Complete", systemImage: "checkmark.seal").foregroundColor(.green)

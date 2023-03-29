@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct QuestionTextFieldStyle: ViewModifier {
+struct TMTextFieldStyleVM: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.title3)
@@ -19,17 +19,36 @@ struct QuestionTextFieldStyle: ViewModifier {
     }
 }
 extension View {
-    func questionTextFieldStyle() -> some View {
-        modifier(QuestionTextFieldStyle())
+    func TMTextFieldStyle() -> some View {
+        modifier(TMTextFieldStyleVM())
     }
 }
 
 extension View {
-    func QuestionTextField(_ textBinding: Binding<String>) -> some View {
+    func TMTextField(_ textBinding: Binding<String>) -> some View {
         return HStack {
             Spacer(minLength: 8)
             TextField("", text: textBinding, axis: .vertical)
-                .lineLimit(2...10).questionTextFieldStyle()
+                .lineLimit(2...10).TMTextFieldStyle()
+        }
+    }
+}
+
+extension View {
+    func TMTextField(_ textBinding: Binding<String>, limit: ClosedRange<Int>) -> some View {
+        return HStack {
+            Spacer(minLength: 8)
+            TextField("", text: textBinding, axis: .vertical)
+                .lineLimit(2...10).TMTextFieldStyle()
+        }
+    }
+}
+
+extension View {
+    func TMSingleLineTextField(_ textBinding: Binding<String>) -> some View {
+        return HStack {
+            Spacer(minLength: 8)
+            TextField("", text: textBinding).TMTextFieldStyle()
         }
     }
 }

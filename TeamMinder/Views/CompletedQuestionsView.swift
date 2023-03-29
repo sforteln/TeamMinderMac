@@ -17,9 +17,7 @@ struct CompletedQuestionsView: View {
                 ForEach(member.getCompletedQuestions(), id: \.question) { question in
                     SingleCompletedQuestionView(teammember: member, question: question)
                 }
-                
             }
-            
         }
     }
 }
@@ -31,15 +29,14 @@ struct SingleCompletedQuestionView: View {
     var body: some View {
         VStack {
             TitleText("Question")
-            QuestionTextField($question.question)
+            TMTextField($question.question)
             TitleText("Notes from \(question.completedDateDisplay())")
-            QuestionTextField($question.notes)
+            TMTextField($question.notes)
             Divider()
             Spacer()
         }
     }
 }
-
 
 struct CompletedQuestionsView_Previews: PreviewProvider {
     static var previews: some View {

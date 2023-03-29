@@ -8,11 +8,12 @@
 import SwiftUI
 
 
-
 struct ContentView: View {
     @EnvironmentObject var team: Team
     @State private var showAddUserSheet = false
     @State private var selection: TeamMember?
+    
+    let teamTrendsConst = "Team Trends"
     var body: some View {
         NavigationSplitView {
             List(selection: $selection){
@@ -20,13 +21,17 @@ struct ContentView: View {
                     .font(.headline)
                 Divider()
                 ForEach(team.members, id: \.name) { member in
-//                    NavigationLink(value: member) {
-//                        Text(member.name)
-//                    }
                     TeamMemberSidebarCell(member: member)
                 }
+                Divider()
                 Spacer()
             }
+            
+            NavigationLink(
+                destination: TeamTrendsView(),
+                label: {
+                    Label("Team Trends",systemImage: "chart.xyaxis.line")
+                })
             
             Button(action: {
                 showAddUserSheet.toggle()

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D34651E29D48BC600B5DE29 /* CompletedQuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34651D29D48BC600B5DE29 /* CompletedQuestionsView.swift */; };
+		4D34652029D48BE400B5DE29 /* TrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34651F29D48BE400B5DE29 /* TrendsView.swift */; };
+		4D34652229D48BEE00B5DE29 /* TeamTrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652129D48BEE00B5DE29 /* TeamTrendsView.swift */; };
 		4D36417C29CCDC7D00FECC61 /* TeamMinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36417B29CCDC7D00FECC61 /* TeamMinderApp.swift */; };
 		4D36417E29CCDC7D00FECC61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36417D29CCDC7D00FECC61 /* ContentView.swift */; };
 		4D36418029CCDC7E00FECC61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D36417F29CCDC7E00FECC61 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D34651D29D48BC600B5DE29 /* CompletedQuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedQuestionsView.swift; sourceTree = "<group>"; };
+		4D34651F29D48BE400B5DE29 /* TrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsView.swift; sourceTree = "<group>"; };
+		4D34652129D48BEE00B5DE29 /* TeamTrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTrendsView.swift; sourceTree = "<group>"; };
 		4D36417829CCDC7D00FECC61 /* TeamMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D36417B29CCDC7D00FECC61 /* TeamMinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMinderApp.swift; sourceTree = "<group>"; };
 		4D36417D29CCDC7D00FECC61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -168,6 +174,9 @@
 				4D85042B29D22A4C00386F08 /* QuestionsView.swift */,
 				4D85042D29D328CB00386F08 /* TeamMemberView.swift */,
 				4D85042F29D3438600386F08 /* TeamMemberSidebarCell.swift */,
+				4D34651D29D48BC600B5DE29 /* CompletedQuestionsView.swift */,
+				4D34651F29D48BE400B5DE29 /* TrendsView.swift */,
+				4D34652129D48BEE00B5DE29 /* TeamTrendsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,15 +321,18 @@
 			files = (
 				4D36417E29CCDC7D00FECC61 /* ContentView.swift in Sources */,
 				4D3641AC29CF850F00FECC61 /* Question.swift in Sources */,
+				4D34651E29D48BC600B5DE29 /* CompletedQuestionsView.swift in Sources */,
 				4D3641B029D1D81100FECC61 /* AddMemberSheet.swift in Sources */,
 				4D36417C29CCDC7D00FECC61 /* TeamMinderApp.swift in Sources */,
 				4D85042829D2197E00386F08 /* DataService.swift in Sources */,
 				4D3641AE29CF876F00FECC61 /* Team.swift in Sources */,
 				4D85042A29D22A3B00386F08 /* InfoView.swift in Sources */,
 				4D85042E29D328CB00386F08 /* TeamMemberView.swift in Sources */,
+				4D34652029D48BE400B5DE29 /* TrendsView.swift in Sources */,
 				4D85043029D3438600386F08 /* TeamMemberSidebarCell.swift in Sources */,
 				4D85042C29D22A4C00386F08 /* QuestionsView.swift in Sources */,
 				4D3641AA29CCE19E00FECC61 /* TeamMember.swift in Sources */,
+				4D34652229D48BEE00B5DE29 /* TeamTrendsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

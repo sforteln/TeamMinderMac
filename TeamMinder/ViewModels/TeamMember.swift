@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 class TeamMember : ObservableObject, Codable {
     @Published var id : UUID
@@ -14,6 +15,8 @@ class TeamMember : ObservableObject, Codable {
     @Published var notes : String = ""
     @Published var family : String = ""
     @Published var questions : [Question] = [Question]()
+    
+    private var cancellable: Cancellable?
         
     init(name: String) {
         self.id = UUID()
@@ -36,6 +39,13 @@ class TeamMember : ObservableObject, Codable {
             return question.completeDate == nil
         }
         
+    }
+    
+    func complete(question: Question, notes: String) {
+        question.talkedAbout = true
+        question.notes = notes
+        question.completeDate = Date.now
+        objectWillChange.send()
     }
     
     required init(from decoder: Decoder) throws {

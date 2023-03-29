@@ -26,7 +26,7 @@ class Team : ObservableObject, Codable {
 //        return relativeDate
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd-yyyy"
+        dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
         return dateFormatter.string(from: lastSave)
     }
     

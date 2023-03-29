@@ -14,8 +14,8 @@ struct QuestionsView: View {
     var body: some View {
         VStack {
             List{
-                ForEach(member.questions, id: \.question) { question in
-                    SingleQuestionView(question: question)
+                ForEach(member.getNotCompletedQuestions(), id: \.question) { question in
+                    SingleQuestionView(teammember: member, question: question)
                 }
                 
             }
@@ -48,6 +48,7 @@ struct QuestionsView: View {
 }
 
 struct SingleQuestionView: View {
+    @ObservedObject var teammember: TeamMember
     @ObservedObject var question : Question
     @State private var showCompleteQuestionSheet = false
     var body: some View {
@@ -63,13 +64,14 @@ struct SingleQuestionView: View {
             Spacer()
             Button(action: {showCompleteQuestionSheet.toggle()}, label: {
                 Label("Complete", systemImage: "checkmark.seal").foregroundColor(.green)
-            }).sheet(isPresented: $showCompleteQuestionSheet) { CompleteQuestionSheet(question: question) }
+            }).sheet(isPresented: $showCompleteQuestionSheet) { CompleteQuestionSheet(teammember: teammember,question: question) }
             Spacer()
         }
     }
 }
 
 struct CompleteQuestionSheet: View {
+    @ObservedObject var teammember: TeamMember
     @ObservedObject var question: Question
     @Environment(\.dismiss) var dismiss
     @State private var notes = ""
@@ -82,7 +84,7 @@ struct CompleteQuestionSheet: View {
                 HStack {
                     Spacer(minLength: 40)
                     Button {
-                        question.complete(notes: notes)
+                        teammember.complete(question: question, notes: notes)
                         dismiss()
                     } label: {
                         Text("Complete Question")

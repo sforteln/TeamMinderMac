@@ -20,6 +20,14 @@ struct TeamMemberView: View {
             .tabItem {
                 Label("Questions", systemImage: "questionmark.bubble")
             }
+            CompletedQuestionsView(member: member)
+            .tabItem {
+                Label("Completed Questions", systemImage: "questionmark.bubble")
+            }
+            TrendsView()
+            .tabItem {
+                Label("Trends", systemImage: "questionmark.bubble")
+            }
         }
     }
 }

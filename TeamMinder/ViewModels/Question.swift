@@ -17,12 +17,6 @@ class Question : ObservableObject, Codable {
         self.question = question
     }
     
-    func complete(notes: String) {
-        talkedAbout = true
-        self.notes = notes
-        self.completeDate = Date.now
-    }
-    
     required init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         question = try values.decode(String.self, forKey: .question)
@@ -31,6 +25,15 @@ class Question : ObservableObject, Codable {
         if values.contains(.completeDate) {
             completeDate = try values.decode(Date.self, forKey: .completeDate)
         }
+    }
+    
+    func completedDateDisplay() -> String {
+        guard let date = completeDate else {
+            return "no date"
+        }
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+        return dateFormatter.string(from: date)
     }
     
     func encode(to encoder: Encoder) throws {

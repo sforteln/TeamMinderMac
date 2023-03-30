@@ -12,6 +12,7 @@
 		4D34652229D48BEE00B5DE29 /* TeamTrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652129D48BEE00B5DE29 /* TeamTrendsView.swift */; };
 		4D34652529D4994500B5DE29 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652429D4994500B5DE29 /* Styling.swift */; };
 		4D34652729D5C60C00B5DE29 /* ButtonStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652629D5C60C00B5DE29 /* ButtonStyling.swift */; };
+		4D34652929D604C100B5DE29 /* TrendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652829D604C100B5DE29 /* TrendData.swift */; };
 		4D36417C29CCDC7D00FECC61 /* TeamMinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36417B29CCDC7D00FECC61 /* TeamMinderApp.swift */; };
 		4D36417E29CCDC7D00FECC61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36417D29CCDC7D00FECC61 /* ContentView.swift */; };
 		4D36418029CCDC7E00FECC61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D36417F29CCDC7E00FECC61 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		4D34652129D48BEE00B5DE29 /* TeamTrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTrendsView.swift; sourceTree = "<group>"; };
 		4D34652429D4994500B5DE29 /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
 		4D34652629D5C60C00B5DE29 /* ButtonStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyling.swift; sourceTree = "<group>"; };
+		4D34652829D604C100B5DE29 /* TrendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendData.swift; sourceTree = "<group>"; };
 		4D36417829CCDC7D00FECC61 /* TeamMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D36417B29CCDC7D00FECC61 /* TeamMinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMinderApp.swift; sourceTree = "<group>"; };
 		4D36417D29CCDC7D00FECC61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				4D3641A929CCE19E00FECC61 /* TeamMember.swift */,
 				4D3641AB29CF850F00FECC61 /* Question.swift */,
 				4D3641AD29CF876F00FECC61 /* Team.swift */,
+				4D34652829D604C100B5DE29 /* TrendData.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				4D85043029D3438600386F08 /* TeamMemberSidebarCell.swift in Sources */,
 				4D85042C29D22A4C00386F08 /* QuestionsView.swift in Sources */,
 				4D3641AA29CCE19E00FECC61 /* TeamMember.swift in Sources */,
+				4D34652929D604C100B5DE29 /* TrendData.swift in Sources */,
 				4D34652229D48BEE00B5DE29 /* TeamTrendsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

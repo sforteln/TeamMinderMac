@@ -27,11 +27,9 @@ struct TeamMinderApp: App {
                     Text("Last saved: \(lastSaveDisplay)").fontWeight(.thin).onReceive(timer) { _ in
                         save()
                     }
-                    
                     Button(action: {save()}) {
                         Text("Save")
                     }
-                    
                 }
         }
     }

@@ -32,15 +32,10 @@ struct InfoView: View {
             
             HStack {
                 Spacer()
-                Button(action: {
+                TMButton(color: .red, action: {
                     team.deleteMember(member: member)
-                }) {
-                    Text("Remove").foregroundColor(.red)
-                }
-                .overlay(
-                    RoundedRectangle(cornerRadius: 6)
-                        .stroke(Color.red, lineWidth: 2)
-                ).padding(4.0)
+                }, text: "Remove")
+                
             }
         }.padding([.leading, .trailing], 10)
     }

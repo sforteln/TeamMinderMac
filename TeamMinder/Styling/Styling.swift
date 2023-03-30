@@ -62,3 +62,10 @@ extension View {
     }
 }
 
+extension View {
+    func TMButton(color: Color, action: @escaping () -> Void, text: String) -> some View {
+        return Button(action: action) {
+            Text(text).foregroundColor(color)
+        }.padding(4.0).buttonStyle(.bordered).tint(color)
+    }
+}

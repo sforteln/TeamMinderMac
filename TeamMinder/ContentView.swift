@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var showAddUserSheet = false
     @State private var selection: TeamMember?
     
+    
     let teamTrendsConst = "Team Trends"
     var body: some View {
         NavigationSplitView {

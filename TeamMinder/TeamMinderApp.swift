@@ -10,27 +10,27 @@ import SwiftUI
 @main
 struct TeamMinderApp: App {
     @StateObject var dataService = DataService()
+    let timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
+    @State var lastSaveDisplay : String = "---"
+    
+    func save() {
+        dataService.save()
+        lastSaveDisplay = dataService.team.lastSaveDisplayValue()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(dataService)
                 .environmentObject(dataService.team)
                 .toolbar {
-                    Text("Last saved: \(dataService.team.lastSaveDisplay())")
-                    Button(action: {dataService.save()}) {
+                    Text("Last saved: \(lastSaveDisplay)").fontWeight(.thin).onReceive(timer) { _ in
+                        save()
+                    }
+                    
+                    Button(action: {save()}) {
                         Text("Save")
-                            .foregroundColor(.blue)
-                        
-                    }.padding(1.0)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 6)
-                                .stroke(Color.blue, lineWidth: 2)
-                        )
-                    Button(action: {dataService.load()}) {
-                    Text("Load")
-                                .foregroundColor(.blue)
-                        
-                }
+                    }
                     
                 }
         }

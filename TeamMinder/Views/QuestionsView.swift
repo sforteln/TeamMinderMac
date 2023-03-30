@@ -24,23 +24,12 @@ struct QuestionsView: View {
                 Spacer()
                 Button(action: {showAddQuestionSheet.toggle()}) {
                     Text("Add Question")
-                        .foregroundColor(.blue)
+//                        .foregroundColor(.blue)
                     
-                }.padding(1.0)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 6)
-                            .stroke(Color.blue, lineWidth: 2)
-                    )
-                    .sheet(isPresented: $showAddQuestionSheet) { AddQuestionSheet(teammember: member) }
-                Button(action: {}) {
-                    Text("Previous Questions")
-                        .foregroundColor(.blue)
-                    
-                }.padding(1.0)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 6)
-                            .stroke(Color.blue, lineWidth: 2)
-                    )
+                }
+                .padding(1.0)
+                .buttonStyle(.bordered)
+                .sheet(isPresented: $showAddQuestionSheet) { AddQuestionSheet(teammember: member) }
                 Spacer()
             }
         }
@@ -83,6 +72,7 @@ struct CompleteQuestionSheet: View {
                         Text("Complete Question")
                             .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                     }
+                    
                     Spacer(minLength: 30)
                     Button {
                         dismiss()

@@ -7,7 +7,7 @@
 
 import Foundation
 class DataService :ObservableObject {
-    private(set) var team = Team()
+    var team = Team()
     
     init() {
         load()
@@ -17,7 +17,8 @@ class DataService :ObservableObject {
         if let encoded = try? JSONEncoder().encode(team) {
                 UserDefaults.standard.set(encoded, forKey: "SavedData")
             print("Saved")
-            }
+            team.lastSave = Date.now
+        }
     }
     
     func load(){

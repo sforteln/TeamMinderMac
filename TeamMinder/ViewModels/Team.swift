@@ -10,6 +10,7 @@ import Foundation
 class Team : ObservableObject, Codable {
     @Published var members = [TeamMember]()
     @Published var lastSave : Date
+
     
     func deleteMember(member: TeamMember) {
         members.removeAll { $0 == member }
@@ -19,14 +20,14 @@ class Team : ObservableObject, Codable {
         members.append(TeamMember(name: name))
     }
     
-    func lastSaveDisplay() -> String {
+    func lastSaveDisplayValue() -> String {
 //        let formatter = RelativeDateTimeFormatter()
 //        formatter.unitsStyle = .full
 //        let relativeDate = formatter.localizedString(for: lastSave, relativeTo: Date.now)
 //        return relativeDate
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+        dateFormatter.dateFormat = "MM-dd HH:mm:ss"
         return dateFormatter.string(from: lastSave)
     }
     
@@ -38,6 +39,7 @@ class Team : ObservableObject, Codable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         members = try values.decode([TeamMember].self, forKey: .members)
         lastSave = try values.decode(Date.self, forKey: .lastSave)
+        
     }
     
     func encode(to encoder: Encoder) throws {

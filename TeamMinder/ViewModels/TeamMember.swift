@@ -8,13 +8,16 @@
 import Foundation
 import Combine
 
-class TeamMember : ObservableObject, Codable {
+class TeamMember : ObservableObject, Codable, Identifiable {
     @Published var id : UUID
     @Published var name : String
     @Published var city : String = ""
     @Published var notes : String = ""
     @Published var family : String = ""
     @Published var questions : [Question] = [Question]()
+    @Published var trends : [TrendData] = [TrendData]()
+    @Published var performanceGood : String = ""
+    @Published var performanceNeedsImprovement : String = ""
     
     private var cancellable: Cancellable?
         
@@ -56,6 +59,9 @@ class TeamMember : ObservableObject, Codable {
         notes = try values.decode(String.self, forKey: .notes)
         family = try values.decode(String.self, forKey: .family)
         questions = try values.decode(Array.self, forKey: .questions)
+        trends = try values.decode(Array.self, forKey: .trends)
+        performanceGood = try values.decode(String.self, forKey: .performanceGood)
+        performanceNeedsImprovement = try values.decode(String.self, forKey: .performanceNeedsImprovement)
     }
     
     func encode(to encoder: Encoder) throws {
@@ -66,6 +72,9 @@ class TeamMember : ObservableObject, Codable {
         try container.encode(notes, forKey: .notes)
         try container.encode(family, forKey: .family)
         try container.encode(questions, forKey: .questions)
+        try container.encode(trends, forKey: .trends)
+        try container.encode(performanceGood, forKey: .performanceGood)
+        try container.encode(performanceNeedsImprovement, forKey: .performanceNeedsImprovement)
     }
     
     enum CodingKeys: String, CodingKey {
@@ -75,6 +84,9 @@ class TeamMember : ObservableObject, Codable {
         case notes
         case family
         case questions
+        case trends
+        case performanceGood
+        case performanceNeedsImprovement
     }
 }
 
@@ -85,6 +97,8 @@ extension TeamMember:Equatable {
         && lhs.notes == rhs.notes
         && lhs.family == rhs.family
         && lhs.questions == rhs.questions
+        && lhs.performanceGood == rhs.performanceGood
+        && lhs.performanceNeedsImprovement == rhs.performanceNeedsImprovement
     }
 }
 

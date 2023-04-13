@@ -11,8 +11,7 @@
 		4D34652029D48BE400B5DE29 /* TrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34651F29D48BE400B5DE29 /* TrendsView.swift */; };
 		4D34652229D48BEE00B5DE29 /* TeamTrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652129D48BEE00B5DE29 /* TeamTrendsView.swift */; };
 		4D34652529D4994500B5DE29 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652429D4994500B5DE29 /* Styling.swift */; };
-		4D34652729D5C60C00B5DE29 /* ButtonStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652629D5C60C00B5DE29 /* ButtonStyling.swift */; };
-		4D34652929D604C100B5DE29 /* TrendData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652829D604C100B5DE29 /* TrendData.swift */; };
+		4D34652929D604C100B5DE29 /* Trend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D34652829D604C100B5DE29 /* Trend.swift */; };
 		4D36417C29CCDC7D00FECC61 /* TeamMinderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36417B29CCDC7D00FECC61 /* TeamMinderApp.swift */; };
 		4D36417E29CCDC7D00FECC61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D36417D29CCDC7D00FECC61 /* ContentView.swift */; };
 		4D36418029CCDC7E00FECC61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D36417F29CCDC7E00FECC61 /* Assets.xcassets */; };
@@ -24,11 +23,13 @@
 		4D3641AC29CF850F00FECC61 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3641AB29CF850F00FECC61 /* Question.swift */; };
 		4D3641AE29CF876F00FECC61 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3641AD29CF876F00FECC61 /* Team.swift */; };
 		4D3641B029D1D81100FECC61 /* AddMemberSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3641AF29D1D81100FECC61 /* AddMemberSheet.swift */; };
+		4D3F12D029E592DD009073D1 /* UserFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D3F12CF29E592DD009073D1 /* UserFile.swift */; };
 		4D85042829D2197E00386F08 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85042729D2197E00386F08 /* DataService.swift */; };
 		4D85042A29D22A3B00386F08 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85042929D22A3B00386F08 /* InfoView.swift */; };
 		4D85042C29D22A4C00386F08 /* QuestionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85042B29D22A4C00386F08 /* QuestionsView.swift */; };
 		4D85042E29D328CB00386F08 /* TeamMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85042D29D328CB00386F08 /* TeamMemberView.swift */; };
 		4D85043029D3438600386F08 /* TeamMemberSidebarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D85042F29D3438600386F08 /* TeamMemberSidebarCell.swift */; };
+		4DA5450029D892DD00DA965F /* Performance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA544FF29D892DD00DA965F /* Performance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +54,7 @@
 		4D34651F29D48BE400B5DE29 /* TrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsView.swift; sourceTree = "<group>"; };
 		4D34652129D48BEE00B5DE29 /* TeamTrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTrendsView.swift; sourceTree = "<group>"; };
 		4D34652429D4994500B5DE29 /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
-		4D34652629D5C60C00B5DE29 /* ButtonStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyling.swift; sourceTree = "<group>"; };
-		4D34652829D604C100B5DE29 /* TrendData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendData.swift; sourceTree = "<group>"; };
+		4D34652829D604C100B5DE29 /* Trend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trend.swift; sourceTree = "<group>"; };
 		4D36417829CCDC7D00FECC61 /* TeamMinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamMinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D36417B29CCDC7D00FECC61 /* TeamMinderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMinderApp.swift; sourceTree = "<group>"; };
 		4D36417D29CCDC7D00FECC61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,11 +70,13 @@
 		4D3641AB29CF850F00FECC61 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		4D3641AD29CF876F00FECC61 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		4D3641AF29D1D81100FECC61 /* AddMemberSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberSheet.swift; sourceTree = "<group>"; };
+		4D3F12CF29E592DD009073D1 /* UserFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFile.swift; sourceTree = "<group>"; };
 		4D85042729D2197E00386F08 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		4D85042929D22A3B00386F08 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		4D85042B29D22A4C00386F08 /* QuestionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsView.swift; sourceTree = "<group>"; };
 		4D85042D29D328CB00386F08 /* TeamMemberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberView.swift; sourceTree = "<group>"; };
 		4D85042F29D3438600386F08 /* TeamMemberSidebarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberSidebarCell.swift; sourceTree = "<group>"; };
+		4DA544FF29D892DD00DA965F /* Performance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Performance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,6 @@
 			isa = PBXGroup;
 			children = (
 				4D34652429D4994500B5DE29 /* Styling.swift */,
-				4D34652629D5C60C00B5DE29 /* ButtonStyling.swift */,
 			);
 			path = Styling;
 			sourceTree = "<group>";
@@ -178,7 +179,7 @@
 				4D3641A929CCE19E00FECC61 /* TeamMember.swift */,
 				4D3641AB29CF850F00FECC61 /* Question.swift */,
 				4D3641AD29CF876F00FECC61 /* Team.swift */,
-				4D34652829D604C100B5DE29 /* TrendData.swift */,
+				4D34652829D604C100B5DE29 /* Trend.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -194,6 +195,8 @@
 				4D34651D29D48BC600B5DE29 /* CompletedQuestionsView.swift */,
 				4D34651F29D48BE400B5DE29 /* TrendsView.swift */,
 				4D34652129D48BEE00B5DE29 /* TeamTrendsView.swift */,
+				4DA544FF29D892DD00DA965F /* Performance.swift */,
+				4D3F12CF29E592DD009073D1 /* UserFile.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -340,7 +343,6 @@
 				4D36417E29CCDC7D00FECC61 /* ContentView.swift in Sources */,
 				4D3641AC29CF850F00FECC61 /* Question.swift in Sources */,
 				4D34651E29D48BC600B5DE29 /* CompletedQuestionsView.swift in Sources */,
-				4D34652729D5C60C00B5DE29 /* ButtonStyling.swift in Sources */,
 				4D3641B029D1D81100FECC61 /* AddMemberSheet.swift in Sources */,
 				4D36417C29CCDC7D00FECC61 /* TeamMinderApp.swift in Sources */,
 				4D85042829D2197E00386F08 /* DataService.swift in Sources */,
@@ -351,8 +353,10 @@
 				4D85043029D3438600386F08 /* TeamMemberSidebarCell.swift in Sources */,
 				4D85042C29D22A4C00386F08 /* QuestionsView.swift in Sources */,
 				4D3641AA29CCE19E00FECC61 /* TeamMember.swift in Sources */,
-				4D34652929D604C100B5DE29 /* TrendData.swift in Sources */,
+				4DA5450029D892DD00DA965F /* Performance.swift in Sources */,
+				4D34652929D604C100B5DE29 /* Trend.swift in Sources */,
 				4D34652229D48BEE00B5DE29 /* TeamTrendsView.swift in Sources */,
+				4D3F12D029E592DD009073D1 /* UserFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

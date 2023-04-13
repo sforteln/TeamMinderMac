@@ -26,13 +26,15 @@ struct ContentView: View {
                 }
                 Divider()
                 Spacer()
+                NavigationLink(
+                    destination: TeamTrendsView(),
+                    label: {
+                        Label("Team Trends",systemImage: "chart.xyaxis.line")
+                    })
+                
             }
             
-            NavigationLink(
-                destination: TeamTrendsView(),
-                label: {
-                    Label("Team Trends",systemImage: "chart.xyaxis.line")
-                })
+            
             
             Button(action: {
                 showAddUserSheet.toggle()
@@ -41,7 +43,19 @@ struct ContentView: View {
             })
             .padding([.leading, .trailing], 2.0)
             .padding(.bottom, 4.0)
-            .sheet(isPresented: $showAddUserSheet) { AddTeamMemberSheet() }
+            .sheet(isPresented: $showAddUserSheet) {
+                AddTeamMemberSheet()
+            }
+            
+            Button(action: {
+                importUser(toTeam: team)
+            }, label: {
+                Label("Import Teammate", systemImage: "person.icloud").font(.subheadline)
+            })
+            .padding([.leading, .trailing], 2.0)
+            .padding(.bottom, 4.0)
+            
+            
         } detail: {
             if let member = selection {
                 TeamMemberView(member: member)
@@ -57,6 +71,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(testTeamData())
+        ContentView().environmentObject(TestData.teamTestData)
     }
 }

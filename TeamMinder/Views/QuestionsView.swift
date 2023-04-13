@@ -13,9 +13,18 @@ struct QuestionsView: View {
     @State private var showAddQuestionSheet = false
     var body: some View {
         VStack {
-            List{
-                ForEach(member.getNotCompletedQuestions(), id: \.question) { question in
-                    SingleQuestionView(teammember: member, question: question)
+            if member.getNotCompletedQuestions().count > 0 {
+                List{
+                    ForEach(member.getNotCompletedQuestions(), id: \.question) { question in
+                        SingleQuestionView(teammember: member, question: question)
+                    }
+                    
+                }
+            } else {
+                Spacer()
+                VStack {
+                    Text("Add a question below").font(.title2)
+                    Image(systemName: "arrow.down").font(.title2)
                 }
                 
             }
@@ -126,6 +135,6 @@ struct AddQuestionSheet: View {
 
 struct QuestionsView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionsView( member: testTeamData().members[0]).environmentObject(testTeamData())
+        QuestionsView( member: TestData.teamTestData.members[0]).environmentObject(TestData.teamTestData)
     }
 }

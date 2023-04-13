@@ -11,10 +11,16 @@ struct TMTextFieldStyleVM: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(.title3)
-            .foregroundColor(.black)
+            .foregroundColor(Color(red: 0.3, green: 0.3, blue: 0.3, opacity: 1.0))
+            .padding( 2.0)
+            .background(Color(red: 0.85, green: 0.85, blue: 0.85, opacity: 1.0))
+            .clipShape(RoundedRectangle(cornerRadius: 4))
             .padding([.top,.bottom], 2.0)
-            .background(Color(red: 0.95, green: 0.95, blue: 0.95, opacity: 1.0))
-            .clipShape(RoundedRectangle(cornerRadius: 8))
+//            .font(.title3)
+//            .foregroundColor(.black)
+//            .padding([.top,.bottom], 2.0)
+//            .background(Color(red: 0.95, green: 0.95, blue: 0.95, opacity: 1.0))
+//            .clipShape(RoundedRectangle(cornerRadius: 8))
             
     }
 }
@@ -67,5 +73,17 @@ extension View {
         return Button(action: action) {
             Text(text).foregroundColor(color)
         }.padding(4.0).buttonStyle(.bordered).tint(color)
+    }
+}
+
+extension View {
+    func TMTextEditor(_ binding: Binding<String>) -> some View {
+        TextEditor(text: binding)
+            .font(.title3)
+            .foregroundColor(Color(red: 0.3, green: 0.3, blue: 0.3, opacity: 1.0))
+            .padding( 2.0)
+            .background(Color(red: 0.85, green: 0.85, blue: 0.85, opacity: 1.0))
+            .clipShape(RoundedRectangle(cornerRadius: 4))
+            .padding([.top,.bottom], 2.0)
     }
 }

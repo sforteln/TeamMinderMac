@@ -18,6 +18,6 @@ struct TeamMemberSidebarCell: View {
 
 struct TeamMemberSidebarCell_Previews: PreviewProvider {
     static var previews: some View {
-        TeamMemberSidebarCell(member: testTeamData().members[0])
+        TeamMemberSidebarCell(member: TestData.teamTestData.members[0])
     }
 }

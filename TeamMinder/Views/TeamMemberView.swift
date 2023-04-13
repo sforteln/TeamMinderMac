@@ -24,9 +24,13 @@ struct TeamMemberView: View {
             .tabItem {
                 Label("Completed Questions", systemImage: "questionmark.bubble")
             }
-            TrendsView(data: testTrendData())
+            TrendsView(member: member)
             .tabItem {
                 Label("Trends", systemImage: "questionmark.bubble")
+            }
+            PerformanceView(member: member)
+            .tabItem {
+                Label("Performance", systemImage: "lightbulb.circle")
             }
         }
     }
@@ -41,7 +45,7 @@ struct NoTeamViewOfFull: View {
 
 struct TeamMemberView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamMemberView(member: testTeamData().members[0]).environmentObject(testTeamData())
+        TeamMemberView(member: TestData.teamTestData.members[0]).environmentObject(TestData.teamTestData)
     }
 }
 

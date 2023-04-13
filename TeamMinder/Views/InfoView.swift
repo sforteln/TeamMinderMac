@@ -18,24 +18,27 @@ struct InfoView: View {
     var body: some View {
         List {
             TitleText("Name")
-            TMSingleLineTextField($member.name)
+            TMTextEditor($member.name)
             
             TitleText("City")
-            TMSingleLineTextField($member.city)
+            TMTextEditor($member.city)
             
             TitleText("Notes")
-            TMTextField($member.notes)
+            TMTextEditor($member.notes)
             
             TitleText("Family")
-            TMTextField($member.family)
+            TMTextEditor($member.family)
             Spacer()
             
             HStack {
                 Spacer()
                 TMButton(color: .red, action: {
                     team.deleteMember(member: member)
-                }, text: "Remove")
+                }, text: "Remove team member")
                 
+                TMButton(color: .blue, action: {
+                    exportUser(member: member)
+                }, text: "Export user data")
             }
         }.padding([.leading, .trailing], 10)
     }
@@ -43,6 +46,6 @@ struct InfoView: View {
 
 struct InfoView_Previews: PreviewProvider {
     static var previews: some View {
-        InfoView(member: testTeamData().members[0])
+        InfoView(member: TestData.teamTestData.members[0])
     }
 }
